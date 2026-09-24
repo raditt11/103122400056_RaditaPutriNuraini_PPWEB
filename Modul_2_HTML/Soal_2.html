@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Pendaftaran Mahasiswa</title>
+    </head>
+    <body>
+        <h1>Form Pendaftaran Mahasiswa</h1>
+
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki">
+            <label for="laki-laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+            <label for="perempuan">Perempuan</label><br><br>
+
+            <label>Hobi:</label>
+            <input type="checkbox" id="membaca" name="hobi" value="Membaca">
+            <label for="membaca">Membaca</label>
+            <input type="checkbox" id="menulis" name="hobi" value="Menulis">
+            <label for="menulis">Menulis</label>
+            <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+            <label for="olahraga">Olahraga</label><br><br>
+
+            <label for="pendidikan">Pendidikan:</label>
+            <select id="pendidikan" name="pendidikan">
+                <option value="SMA">SMA</option>
+                <option value="D3">D3</option>
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+            </select><br><br>
+
+            <label for="kritik">Kritik dan Saran:</label>
+            <textarea id="kritik" name="kritik" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
