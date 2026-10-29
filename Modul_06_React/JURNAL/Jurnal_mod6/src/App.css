@@ -1,0 +1,347 @@
+
+/* 🔴 REVISI: Styling aplikasi Manajemen Peserta Praktikum */
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: #3156d3;
+  color: white;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: #2444b5;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #d7deea;
+  border-radius: 8px;
+  color: #172033;
+  background: #fff;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #3156d3;
+  box-shadow: 0 0 0 3px rgb(49 86 211 / 12%);
+}
+
+.aplikasi {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 38px 0 56px;
+}
+
+.header-aplikasi {
+  margin-bottom: 28px;
+}
+
+.label-atas {
+  margin: 0 0 10px;
+  color: #3156d3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.header-aplikasi h1 {
+  margin: 0;
+  color: #172033;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.header-aplikasi > p:last-child {
+  margin: 10px 0 0;
+  color: #6b768b;
+  font-size: 15px;
+}
+
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.kartu-ringkasan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 21px;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgb(30 50 90 / 4%);
+}
+
+.kartu-ringkasan span {
+  color: #68758b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kartu-ringkasan strong {
+  color: #1e3476;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.konten-utama {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.8fr) minmax(0, 1.7fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.form-peserta,
+.panel-daftar {
+  min-width: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgb(30 50 90 / 4%);
+}
+
+.form-peserta h2,
+.panel-daftar h2 {
+  margin: 0 0 21px;
+  color: #172033;
+  font-size: 19px;
+}
+
+.form-peserta label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #44516a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-peserta input,
+.form-peserta select {
+  font-size: 14px;
+}
+
+.aksi-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.aksi-form button {
+  flex: 1;
+}
+
+button.tombol-batal {
+  color: #44516a;
+  background: #edf0f6;
+}
+
+button.tombol-batal:hover {
+  background: #dfe5ef;
+}
+
+.pesan-error {
+  margin: 12px 0 0;
+  padding: 12px;
+  color: #a52929;
+  background: #fff0f0;
+  border: 1px solid #ffd3d3;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.filter-peserta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 145px;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.daftar-peserta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-peserta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e5eaf2;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.info-peserta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.info-peserta strong {
+  overflow-wrap: anywhere;
+  color: #172033;
+  font-size: 15px;
+}
+
+.info-peserta span {
+  color: #68758b;
+  font-size: 13px;
+}
+
+.status {
+  align-self: start;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status.hadir {
+  color: #167449;
+  background: #e5f7ed;
+}
+
+.status.belum-hadir {
+  color: #986313;
+  background: #fff4dc;
+}
+
+.aksi-peserta {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #edf0f6;
+}
+
+.aksi-peserta button {
+  padding: 8px 11px;
+  font-size: 12px;
+}
+
+.aksi-peserta button.tombol-edit {
+  color: #3156d3;
+  background: #edf1ff;
+}
+
+.aksi-peserta button.tombol-edit:hover {
+  background: #dfe6ff;
+}
+
+.aksi-peserta button.tombol-hapus {
+  color: #b42332;
+  background: #fff0f0;
+}
+
+.aksi-peserta button.tombol-hapus:hover {
+  background: #ffdddd;
+}
+
+.pesan-kosong {
+  padding: 30px 15px;
+  text-align: center;
+  color: #68758b;
+  background: #f8faff;
+  border: 1px dashed #d7deea;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .aplikasi {
+    width: min(100% - 28px, 560px);
+    padding-top: 26px;
+  }
+
+  .ringkasan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .kartu-ringkasan {
+    padding: 17px;
+  }
+
+  .kartu-ringkasan strong {
+    font-size: 26px;
+  }
+
+  .konten-utama {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-peserta,
+  .panel-daftar {
+    padding: 19px;
+  }
+}
+
+@media (max-width: 420px) {
+  .filter-peserta {
+    grid-template-columns: 1fr;
+  }
+
+  .item-peserta {
+    padding: 12px;
+  }
+
+  .aksi-peserta {
+    gap: 6px;
+  }
+
+  .aksi-peserta button {
+    padding: 8px;
+    font-size: 11px;
+  }
+}
