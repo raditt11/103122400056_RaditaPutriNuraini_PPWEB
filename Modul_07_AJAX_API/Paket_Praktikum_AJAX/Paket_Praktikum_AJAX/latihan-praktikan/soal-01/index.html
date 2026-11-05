@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Informasi Praktikum</title>
+</head>
+<body>
+    <header>
+        <h1>Portal Informasi Praktikum</h1>
+        <p>Modul 07 - AJAX dan Konsumsi API</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Aktivitas Praktikan</h2>
+            <label for="catatan">Catatan praktikan</label>
+            <textarea id="catatan" placeholder="Tuliskan catatan praktikum..."></textarea>
+
+            <div>
+                <p>Jumlah hitungan: <strong id="hitungan">0</strong></p>
+                <button type="button" id="btnHitung">Tambah hitungan</button>
+            </div>
+
+            <p>Waktu halaman pertama dibuka:
+                <strong id="waktuAwal"></strong>
+            </p>
+        </section>
+
+        <section>
+            <h2>Pengumuman Praktikum</h2>
+            <button type="button" id="btnPengumuman">Muat pengumuman</button>
+            <p id="statusPengumuman" role="status"></p>
+            <pre id="hasilPengumuman">Pengumuman belum dimuat.</pre>
+        </section>
+
+        <section>
+            <h2>Direktori Peserta</h2>
+            <label for="sumber">Pilih sumber data:</label>
+            <select id="sumber">
+                <option value="mock">Mock lokal</option>
+                <option value="eksternal">JSONPlaceholder</option>
+            </select>
+
+            <button type="button" id="btnPeserta">Ambil peserta</button>
+            <p id="statusPeserta" role="status"></p>
+            <p id="infoPeserta"></p>
+            <ul id="daftarPeserta"></ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
